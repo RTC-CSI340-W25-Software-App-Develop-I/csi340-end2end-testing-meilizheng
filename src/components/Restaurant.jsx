@@ -1,14 +1,14 @@
-function Restaurant(props) {
-  //Presentational components are primarily focused on the visual appearance and styling.
-  console.log(props);
+function Restaurant({ restaurant }) {
+  console.log(restaurant);
+
   return (
-    <div data-cy={props.name} className="restaurant">
-      <h2>{props.restaurant.name}</h2>
-      <ul>
-        <li>{props.restaurant.address}</li>
-        <li>{props.restaurant.phone}</li>
-        <li>{props.restaurant.cuisine}</li>
-        <li>{props.restaurant.rating}</li>
+    <div data-cy={restaurant.name} className="restaurant">
+      <h2>{restaurant.name}</h2>
+      <ul data-cy="restaurant-item">
+        <li>{restaurant.address}</li>
+        <li>{restaurant.phone}</li>
+        <li>{restaurant.cuisine}</li>
+        <li>{restaurant.rating}</li>
       </ul>
     </div>
   );
